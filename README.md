@@ -3,6 +3,11 @@ Spectral Universe
 
 Spectral Universe is music-driven space shooter that runs on Mono and OpenGL and has been developped entirely in the Boo programming language.
 
+Dependencies
+------------
+* Mono
+* OpenAL
+
 Installation
 ------------
 You **will** need to run the program through Mono, as running it through .NET creates a couple of bugs. At the moment, the user has to launch the game through Mono itself, as mkbundle seems to be broken.

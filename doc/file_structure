@@ -1,0 +1,29 @@
+-----------------------------
+bin/                        |
+-----------------------------
+This is where the output binaries are placed, together with a launch script. In order to succesfully launch the binaries made here, you will need to copy over (or create symbolic links) to all files in the /lib directory.
+
+-----------------------------
+lib/                        |
+-----------------------------
+This is where all the libraries will be placed that our Spectral binaries over at /bin need.
+
+-----------------------------
+doc/                        |
+-----------------------------
+Documentation goes here! Pretty obvious.
+
+-----------------------------
+res/                        |
+-----------------------------
+The place where all the media and resources go that our Spectral binaries over at /bin need.
+
+-----------------------------
+src/                        |
+-----------------------------
+Source code. Trivial.
+
+-----------------------------
+test/                       |
+-----------------------------
+Testing files go here.

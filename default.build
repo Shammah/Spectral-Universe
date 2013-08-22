@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+
+<project name="Spectral Universe" default="game">
+  <loadtasks assembly="Boo.NAnt.Tasks.dll"/>
+
+  <property name="operatingSystem" value="${operating-system::to-string(environment::get-operating-system())}" /> 
+  <choose>
+    <when test="${string::contains(operatingSystem, 'Windows')}">
+      <property name="nant.settings.currentframework" value="net-4.0" />
+    </when>
+    <otherwise>
+      <property name="nant.settings.currentframework" value="mono-4.0" />
+    </otherwise>
+  </choose>
+
+  <target name="engine">
+    <booc output="lib/SpectralEngine.dll" target="library" unsafe="true">
+      <references basedir="lib">
+        <include name="OpenTK.dll" />
+        <include name="NAudio.dll" />
+      </references>
+
+      <sources>
+        <include name="src/Engine/**/*.boo" />
+        <exclude name="src/Engine/Gwen/**/*.boo" />
+      </sources>
+    </booc>
+  </target>
+
+  <target name="game" depends="engine">
+    <booc output="bin/SpectralUniverse.exe" target="exe">
+      <references basedir="lib">
+        <include name="SpectralEngine.dll" />
+        <include name="OpenTK.dll" />
+        <include name="NAudio.dll" />
+      </references>
+
+      <sources>
+        <include name="src/Game/**/*.boo" />
+      </sources>
+    </booc>
+  </target>
+
+  <target name="game-library" depends="engine">
+    <booc output="bin/SpectralUniverse.dll" target="library">
+      <references basedir="lib">
+        <include name="SpectralEngine.dll" />
+        <include name="OpenTK.dll" />
+        <include name="NAudio.dll" />
+      </references>
+
+      <sources>
+        <include name="src/Game/**/*.boo" />
+      </sources>
+    </booc>
+  </target>
+
+  <target name="test-engine" depends="engine">
+    <booc output="bin/SpectralEngineTest.dll" target="library" debug="true">
+      <references>
+        <include name="lib/SpectralEngine.dll" />
+        <include name="test/xunit/xunit.dll" />
+      </references>
+
+      <sources>
+        <include name="test/src/Engine/**/*.boo" />
+      </sources>
+    </booc>
+  </target>
+
+  <target name="test-game" depends="game-library">
+    <booc output="bin/SpectralUniverseTest.dll" target="library" debug="true">
+      <references>
+        <include name="lib/SpectralUniverse.dll" />
+        <include name="test/xunit/xunit.dll" />
+      </references>
+
+      <sources>
+        <include name="test/src/Game/**/*.boo" />
+      </sources>
+    </booc>
+  </target>
+</project>

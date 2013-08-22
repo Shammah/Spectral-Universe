@@ -1,0 +1,1 @@
+- It seems that locking primitives causes problems on Windows. Use Mutexes instead.

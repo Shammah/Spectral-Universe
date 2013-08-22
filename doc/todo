@@ -1,0 +1,8 @@
+TODO:
+
+1   | Create enemy AI using Scripts/Game/Enemy.boo, use default script and MD5 hash for security and ask for permission.
+2   | Add GUI/HUD. Best way to do this is probably render it to a bitmap using .NET and render the final image to a texture covering the entire screen.
+3   | Fix (or make a proper) bloom shader.
+4   | Adjust terrain scaling, and add proper movement boundings.
+5   | Make the terrain logarithmic instead of lineair.
+6   | Make all actors have an ID. Look at Enemy & LaserPewPew, make counter property and setter modulus. All names have ID.

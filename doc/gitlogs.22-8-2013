@@ -1,0 +1,492 @@
+commit cc06cf2d3d17b3457275a42f2e5fbe6cc84c07e8
+Author: Shammah <contact@protoman.net>
+Date:   Thu Aug 22 21:56:54 2013 +0200
+
+    Preparing repository for GitHub.
+
+commit 655f439e186c3a219049fe15f93643631471a370
+Author: Shammah <contact@protoman.net>
+Date:   Wed Aug 7 18:10:46 2013 +0200
+
+    Weapons and projectiles have owners. Expanded AI and sound stats a bit.
+
+commit e3c9d598b39aa3e66aaefc20ea311f10df50ed09
+Author: Shammah <contact@protoman.net>
+Date:   Mon Aug 5 21:24:21 2013 +0200
+
+    Removed leftover debug print.
+
+commit c8dcf247bffd8f9f54e2c0405d153f091143a519
+Author: Shammah <contact@protoman.net>
+Date:   Mon Aug 5 21:23:37 2013 +0200
+
+    Added basic script interaction for enemy AI.
+
+commit e26b6c64d38d3085bfd971c36675afb317ded64f
+Author: Shammah <contact@protoman.net>
+Date:   Mon Aug 5 18:38:09 2013 +0200
+
+    Added OnSpawn event for Actors.
+
+commit 6c053f6896607fc644dbfaf156e7d0234063dee4
+Author: Shammah <contact@protoman.net>
+Date:   Mon Aug 5 18:36:17 2013 +0200
+
+    Added basic script system to load and compile scripts.
+
+commit f145c22b4e26ffbfdeef3ffabd7554ce418591a5
+Author: Shammah <contact@protoman.net>
+Date:   Mon Aug 5 14:17:00 2013 +0200
+
+    Turned back on the fixed game camera.
+
+commit ea5168c9f4c6cddc8efcc1f550de8b216961f427
+Author: Shammah <contact@protoman.net>
+Date:   Mon Aug 5 14:15:47 2013 +0200
+
+    Changed camera movement to work with quaternions instead.
+
+commit 742bb0cfd7be404899de6554f6a57842adbf5444
+Author: Shammah <contact@protoman.net>
+Date:   Sun Aug 4 15:51:02 2013 +0200
+
+    Made the transformaton itself single threaded again, because multiple threads could cause performance issues. It takes a bit longer, but now only needs 1 thread.
+
+commit 258aedac5b19f832c1193aeacc473721f978396c
+Author: Shammah <contact@protoman.net>
+Date:   Sun Aug 4 15:45:22 2013 +0200
+
+    Added some copy constructors.
+
+commit 737509803799d53a7c8cded60633bbf9874e8260
+Author: Shammah <contact@protoman.net>
+Date:   Sun Aug 4 15:36:32 2013 +0200
+
+    ObjReader now correctly calculates the centre of the model.
+
+commit 5381ce47ec4e6af7611a10ce01f37186ed5d781d
+Author: Shammah <contact@protoman.net>
+Date:   Sun Aug 4 15:33:38 2013 +0200
+
+    Fixed some access modifiers.
+
+commit 4c3ba576bbfb750a1249b5baa92fa73507ea5caf
+Author: Shammah <contact@protoman.net>
+Date:   Sun Aug 4 14:39:07 2013 +0200
+
+    Added collision detection between rays and enemies using our new OBB class with the SAT algorithm.
+
+commit d52b76afdbfd2550b5a6d9a5724de03cf0ff212c
+Author: Shammah <contact@protoman.net>
+Date:   Wed Jul 31 18:59:26 2013 +0200
+
+    Fixed some docs and added a cute animation to the test enemy.
+
+commit 7d03c9c149284e70d050631171e4558c9a87fea3
+Author: Shammah <contact@protoman.net>
+Date:   Wed Jul 31 18:52:32 2013 +0200
+
+    Made Enemy IUpdatable, so that we can implement an AI.
+
+commit 82f3769fca974847cfbd5230d8e2556408fc0005
+Author: Shammah <contact@protoman.net>
+Date:   Wed Jul 31 18:48:33 2013 +0200
+
+    Actors now have an event raised when their Destroy() gets called.
+
+commit 3944acfc0f279df7bae0cdec139465d000df49d6
+Author: Shammah <contact@protoman.net>
+Date:   Wed Jul 31 18:19:47 2013 +0200
+
+    Added enemy class.
+
+commit fc4084cc4d6f777fa654903370e6beb98aabd04d
+Author: Shammah <contact@protoman.net>
+Date:   Wed Jul 31 18:03:04 2013 +0200
+
+    Delegated all game meshes to a special GameMesh class which takes care of loading the resources.
+
+commit ef853386dcae4bbea2bfbdb0adac4178f29f1f03
+Author: Shammah <contact@protoman.net>
+Date:   Tue Jul 30 18:17:24 2013 +0200
+
+    Code gardening. All tabs are now spaces.
+
+commit ae43f9cc95a725de5af6af11b791a1993b8c28a6
+Author: Shammah <contact@protoman.net>
+Date:   Tue Jul 30 17:48:52 2013 +0200
+
+    Fixed indendation bug. I'm on a roll it seems...
+
+commit 0c1f67acae8bae11eda716252ba848a841a792e9
+Author: Shammah <contact@protoman.net>
+Date:   Tue Jul 30 17:47:10 2013 +0200
+
+    Fixed a bug where the transforms & channels loop were switched around.
+
+commit b4232a92d8b3bb4744c7040efda2e2e5e1dcafec
+Author: Shammah <contact@protoman.net>
+Date:   Tue Jul 30 17:42:08 2013 +0200
+
+    Frequency levels now get stored per sub-transform, rather than for the whgole transformation itself.
+
+commit 4f0b40163ca3e3a441271aee261711138ddbef69
+Author: Shammah <contact@protoman.net>
+Date:   Tue Jul 30 17:24:05 2013 +0200
+
+    Now generating level sums of transformations.
+
+commit 05525e7773605772c7a0a5e412d1c18ffce050b4
+Author: Shammah <contact@protoman.net>
+Date:   Mon Jul 29 00:30:07 2013 +0200
+
+    Transformation now stores audio samplerate so we can calculate the bin Hz later on.
+
+commit 74c67e4a975d071e5bd11e969e18526c1af14389
+Author: Shammah <contact@protoman.net>
+Date:   Mon Jul 29 00:11:54 2013 +0200
+
+    Added Original properties for the Transformation class to fetch any valueable information lost by downsampling.
+
+commit 3035c9969afc4e2a3202ecbfdb414d66e507f1f4
+Author: Shammah <contact@protoman.net>
+Date:   Sun Jul 28 23:54:50 2013 +0200
+
+    Fixed game namespaces. Added beginning for Transformation stats harvesting.
+
+commit 9807bb339793c2b0df8e205fd8e24f762866eb15
+Author: Shammah <contact@protoman.net>
+Date:   Sun Jul 28 23:15:11 2013 +0200
+
+    Changed TransformationData from class to struct.
+
+commit 05624a5b1571b5d518adb289f965a204f4d21d0c
+Author: Shammah <contact@protoman.net>
+Date:   Sun Jul 28 23:08:58 2013 +0200
+
+    Updated audio test cases.
+
+commit 8926af3376647bcc2a66a611106bfce75fff9bd6
+Author: Shammah <contact@protoman.net>
+Date:   Sun Jul 28 20:28:46 2013 +0200
+
+    Added a model for the enemy.
+
+commit 1793f51032b460dba66095b198cf5522822cd7ff
+Author: Shammah <contact@protoman.net>
+Date:   Sun Jul 28 18:08:44 2013 +0200
+
+    Added rays which point to the direction they are fired to. Also some resource cleanup and tiny bit of documentation.
+
+commit 72f375524044da49022ac4bf7073a805187607ef
+Author: Shammah <contact@protoman.net>
+Date:   Sat Jul 27 17:59:04 2013 +0200
+
+    Fixed incorrect left-over comment.
+
+commit 5e906d5cdae57a9177a7c7cbab978916902b7000
+Author: Shammah <contact@protoman.net>
+Date:   Sat Jul 27 17:58:27 2013 +0200
+
+    Fixed music and improved threading performance.
+
+commit 49731fb95257cd558e44efaee9f14f60bd4e2dc9
+Author: Shammah <contact@protoman.net>
+Date:   Sat Jul 27 16:40:56 2013 +0200
+
+    Forgot to include the actual README, haha.
+
+commit 45319e9c05dc1697d5ab6239ad53ed4a36cc3550
+Author: Shammah <contact@protoman.net>
+Date:   Sat Jul 27 16:36:54 2013 +0200
+
+    Added little comment.
+
+commit c8b71ca9c5952b3bd41113eb47463364da744118
+Author: Shammah <contact@protoman.net>
+Date:   Sat Jul 27 16:35:46 2013 +0200
+
+    Instead of raising an exception, sound properties now get clamped.
+
+commit 73396bdcba57333d2e6bb9a5f417fa794a416abf
+Author: Shammah <contact@protoman.net>
+Date:   Sat Jul 27 16:29:14 2013 +0200
+
+    Added small readme.
+
+commit 3e85362901e8f8f1805579771d7496f260081239
+Author: Shammah <contact@protoman.net>
+Date:   Fri Jul 26 22:29:43 2013 +0200
+
+    Fixed some threading issues. Music still not resolved. Windows graphical issues with player & bullet.
+
+commit b5ca4200b7eea5143af14df0b38c38353ecb3fdb
+Author: Shammah <contact@protoman.net>
+Date:   Tue Jul 16 17:22:45 2013 +0200
+
+    Additional todo points & new music :)
+
+commit 9ed6743d3996ad4d20197f29421551d511ae31c4
+Author: Shammah <contact@protoman.net>
+Date:   Tue Jul 16 17:13:20 2013 +0200
+
+    Added todo with issues.
+
+commit 8be901ced9019845772d8074cd79a556daf70a77
+Author: Shammah <contact@protoman.net>
+Date:   Wed Jun 26 13:30:51 2013 +0200
+
+    Removed GWEN component as it's still awefully broken. Code remains in repository so nothing will be lost.
+
+commit e1d2b5b6bf21c892ca618c1d84ad037818a31e12
+Author: Shammah <contact@protoman.net>
+Date:   Mon Jun 24 23:27:06 2013 +0200
+
+    Re-organized the resources (textures, shaders, music, models etc).
+
+commit 1bdf8d67801d8a0d7d0578b1965e574b0ff41260
+Author: Shammah <contact@protoman.net>
+Date:   Mon Jun 24 22:59:30 2013 +0200
+
+    Changed orientation by euler angles (Vector3) to Quaternions. Also gave the test script a slight update.
+
+commit c106b5a79c9d1612273216050941e0d2cf6957c2
+Author: Shammah <contact@protoman.net>
+Date:   Sun May 26 23:59:02 2013 +0200
+
+    Updated OpenTK.
+
+commit 531a12e950d355a3a8bf87be8bb2bd9d89f027db
+Merge: 7d1ddde 75c26f6
+Author: Shammah <contact@protoman.net>
+Date:   Sun May 26 23:55:36 2013 +0200
+
+    Merge branch 'master' of ssh://raspberry.protoman.net:4000/mnt/storage/git/Spectral Universe
+
+commit 7d1ddde1ef95e3e7fb48c59f095e9b8b47e5df74
+Author: Shammah <contact@protoman.net>
+Date:   Sun May 26 23:54:56 2013 +0200
+
+    Updated OpenTK
+
+commit 75c26f6d07d17ede77bc7eee5a10b4d2ea5e7652
+Author: Shammah <contact@protoman.net>
+Date:   Mon May 13 14:00:53 2013 +0100
+
+    Rewritten bounding box with tests. Collision detection has yet to be implemented.
+
+commit 03f5bcfe4b5ea9e16fbced2a628f9e4cda731ec0
+Author: Shammah <contact@protoman.net>
+Date:   Mon May 13 12:55:19 2013 +0100
+
+    Small code cleaning.
+
+commit 4b7185d4a31d345d29cddb9c22b4664919f91f9e
+Author: Shammah <contact@protoman.net>
+Date:   Mon May 13 12:54:40 2013 +0100
+
+    Small code cleaning.
+
+commit 21fee72293a8a24339ec7b29acc3bcf32cc8c406
+Author: Shammah <contact@protoman.net>
+Date:   Mon May 13 00:24:29 2013 +0200
+
+    Added bounding spheres.
+
+commit ed8fcb081fa472f5ec33c67794aec0d78c564099
+Author: Shammah <contact@protoman.net>
+Date:   Sun May 12 23:12:54 2013 +0200
+
+    Renamed some folders with capitals.
+
+commit e82001dcf5a2bb0912319ffcefa45a895b0708ed
+Author: Shammah <contact@protoman.net>
+Date:   Sun May 5 21:42:09 2013 +0200
+
+    Added bounding box, extend & create test cases
+
+commit af0878252dcbdc02390e31aa1c96d648df58bd7b
+Author: Shammah <contact@protoman.net>
+Date:   Sat May 4 21:59:51 2013 +0200
+
+    Added bounding boxes to ObjReader.
+
+commit 6c9ceddb261dd5baa44a5654fe6fa7fcb2c1cf70
+Author: Shammah <contact@protoman.net>
+Date:   Thu May 2 22:02:14 2013 +0200
+
+    Bullets now get disposed when not visible anymore.
+
+commit 351fd67822899e3782c5f2f9bebd3368892be5b2
+Author: Shammah <contact@protoman.net>
+Date:   Thu May 2 21:40:39 2013 +0200
+
+    Added pewpew laser ray programs.
+
+commit 488baa66b92588ae9a3366e47acab4e027423aca
+Author: Shammah <contact@protoman.net>
+Date:   Thu May 2 21:16:49 2013 +0200
+
+    Alternating laser firing :D
+
+commit 1c260543c08238aa55c1cb245849287b436994f6
+Author: Shammah <contact@protoman.net>
+Date:   Thu May 2 21:05:22 2013 +0200
+
+    Various minor adjustments.
+
+commit f27c059412c21e807718fcbf7cb36ee92c033c79
+Author: Shammah <contact@protoman.net>
+Date:   Thu May 2 20:31:36 2013 +0200
+
+    Refactor lazer firing to the player.
+
+commit 914ddfce66b095f91a0ec9294ebb88bd289109c7
+Author: Shammah <contact@protoman.net>
+Date:   Thu May 2 20:04:59 2013 +0200
+
+    Moved engine tests to the engine folder.
+
+commit 72fd9bdfc5686e9c570f038e86ec404103411cbe
+Author: Shammah <contact@protoman.net>
+Date:   Thu May 2 19:56:07 2013 +0200
+
+    Added support for multiple Dispose() calls.
+
+commit 90fb56cddd6ee03bb50604b1da423b2120004209
+Author: Shammah <contact@protoman.net>
+Date:   Wed May 1 21:42:05 2013 +0200
+
+    Added ObjReaderTest stub, have yet to create.
+
+commit f999cf431fae196cf11e0462b0649fbb444dd0be
+Author: Shammah <contact@protoman.net>
+Date:   Wed May 1 21:19:54 2013 +0200
+
+    Added audio testcases.
+
+commit 7be1cf43fb6fd0d5ccf1a11411697891b64dcdd3
+Author: Shammah <contact@protoman.net>
+Date:   Wed May 1 20:22:04 2013 +0200
+
+    Added exit command test and startup lambda function for the engine.
+
+commit 55120599dbc57726b0e002c97c88e8eaf3993dcc
+Author: Shammah <contact@protoman.net>
+Date:   Tue Apr 30 21:02:56 2013 +0200
+
+    Fixed textcases & updates exception tests.
+
+commit 256130d7d2603497337ca25d885dff77655813bc
+Author: Shammah <contact@protoman.net>
+Date:   Tue Apr 30 20:49:29 2013 +0200
+
+    Moved from NUnit to XUnit.NET
+
+commit ea1e7b600b19ef247b1ca7dc8a00bf65c07e623b
+Author: Shammah <contact@protoman.net>
+Date:   Tue Apr 30 19:58:15 2013 +0100
+
+    Commit for further use on desktop.
+
+commit a25d00053d63d42984fae72b70f3243ea6302b91
+Author: Shammah <contact@protoman.net>
+Date:   Thu Apr 25 13:20:06 2013 +0100
+
+    Made changs to ActorGroup and added testcases.
+
+commit 27717dea22dfc0e5e1093c1b946406f786b0c644
+Author: Shammah <contact@protoman.net>
+Date:   Thu Apr 25 00:18:06 2013 +0200
+
+    In the process of making the ActorGroup an ICollection. Not yet completed, stubs need to be filled in + test cases need to be created.
+
+commit 9ef5ab4bdbb3881e0f84dac2f8c31e679ac35bbf
+Author: Shammah <contact@protoman.net>
+Date:   Wed Apr 24 15:28:05 2013 +0100
+
+    Changed abstract tests to testcases.
+
+commit 2d210e2da369f9a80376a4d2b9386bad8a4b9c73
+Author: Shammah <contact@protoman.net>
+Date:   Sat Apr 20 21:54:37 2013 +0200
+
+    Updated ActorTest to testing standards.
+
+commit e9d73e2cbcb924c71dda94af361a27b3d5c02d58
+Author: Shammah <contact@protoman.net>
+Date:   Sat Apr 20 21:48:29 2013 +0200
+
+    Fixed the player model.
+
+commit 3594e75c0f0e1db7d4d10cdffed1964005606f36
+Author: Shammah <contact@protoman.net>
+Date:   Sat Apr 20 21:48:16 2013 +0200
+
+    Added Camera testcases.
+
+commit 657a29778e675867c14449cbbf1274785a2a219f
+Author: Shammah <contact@protoman.net>
+Date:   Wed Apr 17 17:30:59 2013 +0200
+
+    Added Math unit tests, switched testing using the Assert static class.
+
+commit 7eb5b369d80e278da5e04719ac14b22ca69549b4
+Author: Shammah <contact@protoman.net>
+Date:   Wed Apr 17 17:16:30 2013 +0200
+
+    Added Utility unit tests.
+
+commit ae08e67dd499e3a02c2bc25017767b61f4353868
+Author: Shammah <contact@protoman.net>
+Date:   Tue Apr 16 21:34:28 2013 +0200
+
+    Added basic projectiles and shooting! Now, it's time to start unit testing before it's gets too big.
+
+commit 1a6578611f4b8c92a5e638b31d23fffa6c33c5c3
+Author: Shammah <contact@protoman.net>
+Date:   Sat Apr 13 21:25:32 2013 +0200
+
+    Added Terrain movement speed property.
+
+commit 31aa224416a87aac392927bc5c68a59833d9d987
+Author: Shammah <contact@protoman.net>
+Date:   Sat Apr 13 20:50:35 2013 +0200
+
+    Added camera raycasting functionality, which is needed for shooting later on.
+
+commit 2c4f4089ad0e51c61837dd8512f3a2f51fb8b290
+Author: Shammah <contact@protoman.net>
+Date:   Fri Apr 12 12:30:44 2013 +0200
+
+    Changed a lot of 'busy events' to proper .NET events, saving CPU time. Made the camera attachable to an actor and made the basics of player movement across the terrain.
+
+commit 6c164c518ca69a59ae735dc0f6781c9e5b4a21be
+Author: Shammah <contact@protoman.net>
+Date:   Mon Apr 1 20:03:59 2013 +0200
+
+    Made all input methods virtual.
+
+commit cd0b40e4d544007d1063d691ba7211a48acdd87e
+Author: Shammah <contact@protoman.net>
+Date:   Mon Apr 1 19:29:30 2013 +0200
+
+    Created a Terrain class that buffers and plays terrain from an audio file now, instead of preloading everything. Also some general refactoring and fixing.
+
+commit aa9209974fbb6fcb6a54064b46c4095261aa8b08
+Author: Shammah <contact@protoman.net>
+Date:   Thu Mar 28 20:48:58 2013 +0100
+
+    Added the possibility to only transform a portion of the sound file for terrain.
+
+commit e4d8be9862d644507ab17707c5e61d6e97c54b93
+Author: Shammah <contact@protoman.net>
+Date:   Thu Mar 28 18:40:45 2013 +0100
+
+    Changed a lot of _changed variables into events, like the Camera with its ICameraObserver. Placed the graphical programs of the Engine into Spectral.Graphics.Programs. Also modified the Actor, ActorGroup, Mesh, Programs, Map and so on, so that every Actor can be added into a Map by setting {actor}.Map = myMap. This will be the correct way to add Actors. Each Actor now also needs a name. Lastly, the map is now an IRenderable. Lastly lastly, also fixed some bugs in the ObjReader and added Batman for testing purposes :D.
+
+commit 1a63f7096f059ba1a45b53cb09cfa634cfed936d
+Author: Shammah <contact@protoman.net>
+Date:   Wed Mar 27 21:11:34 2013 +0100
+
+    Initial commit.

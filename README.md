@@ -15,11 +15,9 @@ Installation
 You **will** need to run the program through Mono, as running it through .NET creates a couple of bugs. At the moment, the user has to launch the game through Mono itself, as mkbundle seems to be broken.
 
 1. Clone the repository on your local machine.
-2. Install [NAnt](http://nant.sourceforge.net/).
-3. Add both the NAnt binary path and the Boo compiler folder form this repository to your SYSTEM path, so you can execute the 'nant' and 'booc' compiler in the terminal from any place.
-4. Open up a command prompt, go to the main repository directory and type: nant game.
-5. If everything went correctly, copy over all contents of /lib to /bin.
-6. Copy over the /res folder into /bin and name it "Resources".
+2. Open up a command prompt, go to the main repository directory and either run the build.sh script or type: mono ./booc/booi.exe build.boo
+
+If the script ran successfully, all additional libraries are created in /lib, the binaries are placed in /bin. Finally, all libraries and resources needed to deploy the game are copied over to /bin. To deploy your game, you should be able to just zip up the entire /bin directory and send it out!
 
 Usage
 -----

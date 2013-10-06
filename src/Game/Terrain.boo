@@ -49,7 +49,7 @@ class Terrain(IDisposable):
     Speed as single:
     """The movement speed of the terrain."""
         get:
-            return Length / _bufferSize
+            return Length / _bufferSize * 10
 
     CurrentTransformation as Transformation:
     """Returns the transformation of the front chunk."""
